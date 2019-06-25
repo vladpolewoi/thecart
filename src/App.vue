@@ -1,16 +1,14 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <Shop />
+  </div>
 </template>
 
 <script>
+import Shop from './views/Shop'
+
 export default {
-  created() {
-    fetch("http://localhost:8090/products")
-      .then(response => response.json())
-      .then(({ data }) => {
-        console.log("data", data);
-      });
-  }
+  components: { Shop }
 };
 </script>
 

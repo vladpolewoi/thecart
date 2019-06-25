@@ -1,1 +1,106 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file+'.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include font('Open-sans', './assets/fonts/OpenSans-Regular');
+
+$orange: #F87E2D;
+
+body {
+  background: #26252E;
+  font-family: 'Open-sans';
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  height: 380px;
+  font-size: 18px;
+  color:#ffffff;
+  background-color: #3E3C49;
+  margin: 15px 0;
+  cursor: pointer;
+  border-radius: 20px;
+  &__image {
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  &__price {
+    font-size: 16px;
+    align-self: flex-end;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    margin: 0;
+  }
+}
+
+.cart {
+  background-color: $orange;
+  width: 80px;
+  height: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  &__image {
+    width: 16px;
+  }
+  &__text {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+.orange {
+  background-color: $orange;
+}
+
+.products {
+  margin-top: 100px;
+}
+
+.modal {
+  &__btn {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+  &__image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 50px;
+  }
+  &__description {
+    color: #7F7C9A;
+    max-height: 400px;
+    overflow-y: auto;
+    margin: 20px 0;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.modal-backdrop {
+  background-color: #000000c2;
+}
+
+.modal-content {
+  background-color: #3E3C49;
+  border-radius: 20px;
+  color: white
+}
