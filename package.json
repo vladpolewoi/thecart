@@ -34,12 +34,11 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "@vue/prettier"
+      "plugin:vue/essential"
     ],
     "rules": {
-      "singleQuote": true,
-      "semicolumn": false,
+      "prettier.singleQuote": true,
+      "prettier.semicolumn": false,
       "no-console": "off"
     },
     "parserOptions": {
