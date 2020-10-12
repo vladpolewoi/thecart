@@ -4,7 +4,6 @@ import { RecipesService } from './recipes.service';
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
   styleUrls: ['./recipes.component.scss'],
-  providers: [RecipesService],
 })
 export class RecipesComponent {
   constructor(private recipesService: RecipesService) { }
